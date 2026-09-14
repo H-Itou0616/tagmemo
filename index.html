@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>たぐめも</title>
+</head>
+<body>
+    <div class="inner">
+        <h1>たぐめも</h1>
+        <section id="create-note">
+            <fieldset>
+                <legend><h3>新規メモ作成</h3></legend>
+                <div id="note-flex">
+                    <div id="note-titel-div" class="note">
+                        <label for="note-title">タイトル：</label><input type="text" autocomplete="off" id="note-title">
+                    </div>
+                    <div id="note-body-div" class="note">
+                        <label for="note-body">本文：</label><br>
+                        <textarea name="note-body" id="note-body" placeholder="ここに本文を入力してください"></textarea>
+                    </div>
+                    <div id="note-tag-div" class="note">
+                        <label for="note-tag">タグ：</label><input type="text" autocomplete="off" id="note-tag" placeholder="タグ入力（カンマ区切り）">
+                        <button class="btn" id="save-note-btn">メモを保存</button>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+    
+        <section id="search-note">
+            <div>
+                <fieldset>
+                    <legend><h3>メモ検索</h3></legend>
+                    <div id="search-flex">
+                        検索対象：
+                        <div class="radio-div">
+                            <input type="radio" value="タイトル" name="search-target" id="radio-title">
+                            <label for="radio-title">タイトル</label>
+                        </div>
+                        <div class="radio-div">
+                            <input type="radio" value="本文" name="search-target" id="radio-note-body">
+                            <label for="radio-note-body">本文</label>
+                        </div>
+                        <div class="radio-div">
+                            <input type="radio" value="タグ" name="search-target" id="radio-tag">
+                            <label for="radio-tag">タグ</label>
+                        </div>
+                    </div>
+                キーワード：<input type="text" autocomplete="off" id="search-keyword"><button class="btn" id="search-btn">検索</button>
+                <div id="annotation">※検索結果は下にある「メモ一覧」に表示されます。</div>
+                </fieldset>
+            </div>
+        </section>
+    
+        <section id="note-list">
+            <div>
+                <fieldset>
+                    <legend><h3>メモ一覧</h3></legend>
+                    <div id="reset-div">
+                        <button class="btn" id="reset-btn">すべて表示</button>
+                    </div>
+                    <ul id="note-list-ul">
+    
+                    </ul>
+                </fieldset>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
